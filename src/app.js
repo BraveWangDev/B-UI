@@ -51,7 +51,7 @@ try{
         const vm = new Constructor({
             propsData: {
                 icon: 'settings',
-                loading: true               // 添加loading参数
+                loading: false               // 添加loading参数
             }
         });
         vm.$mount()                     // $mount不写就是放到内存中
