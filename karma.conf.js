@@ -14,9 +14,10 @@ module.exports = function (config) {
 
 
         // list of files / patterns to load in the browser
+        // 告诉 karma，测试用例在哪里
         files: [
-            'dist/**/*.test.js',
-            'dist/**/*.test.css'
+            'dist/**/*.test.js',	// /**/*加载多层级文件
+            'dist/**/*.test.css'	// 加载 css（parcel 打包时会将 css 和 js 分开）
         ],
 
 
@@ -54,6 +55,7 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        // 告诉 karma，打卡哪个浏览器（打卡浏览器需要对应的插件）
         browsers: ['Chrome'],
 
 

@@ -53,8 +53,16 @@
     </button>
 </template>
 <script>
+    // 1，在 button 组件中，全局注册b-icon组件
+    // Vue.component('b-icon', Icon)
+    // import Vue from 'vue'
+    import Icon from '../src/icon'
     // props:组件通信
     export default {
+        // 2，在 button 组件中，局部注册b-icon组件
+        components:{
+            'b-icon': Icon
+        },
         // props:['icon', 'iconPosition']// left、right
         props:{
             icon:{},
