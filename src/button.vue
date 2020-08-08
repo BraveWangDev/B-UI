@@ -42,10 +42,10 @@
     @click="$emit('click')">
         <!--使用b-button中接收到的icon参数，继续传入b-icon组件中-->
         <!--显示 icon 的条件: 有 icon 且当前不处于 loading 状态-->
-        <b-icon class="icon" v-if="icon && !loading" :name="icon"></b-icon>
+        <!--<b-icon class="icon" v-if="icon && !loading" :name="icon"></b-icon>-->
         <!--添加 class：loading-->
         <!--class 添加icon：让 loading 也有左右两种和与文字的间隙-->
-        <b-icon v-if="loading" class="loading icon" name="loading"></b-icon>
+        <!--<b-icon v-if="loading" class="loading icon" name="loading"></b-icon>-->
         <!--由于 slot 不能加 class，所以在外层 div 上添加 class-->
         <div class="content">
             <slot></slot>
