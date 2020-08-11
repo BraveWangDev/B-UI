@@ -1,6 +1,10 @@
+#nodejs语言
 language: node_js
+#nodejs 版本（支持多版本）
 node_js:
 - "8"
+- "9"
+- "10"
 addons:
   chrome: stable
 sudo: required
