@@ -38,7 +38,7 @@
 
     <!--将 icon 部分体检为 b-icon 组件-->
     <!--@click="$emit('click')" : 被点击时触发 click 事件-->
-    <button class="b-button" :class="{[`icon-${iconPosition}`]: true}"
+    <button class="b-button test" :class="{[`icon-${iconPosition}`]: true}"
     @click="$emit('click')">
         <!--使用b-button中接收到的icon参数，继续传入b-icon组件中-->
         <!--显示 icon 的条件: 有 icon 且当前不处于 loading 状态-->
