@@ -56,7 +56,8 @@ module.exports = function (config) {
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         // 告诉 karma，打卡哪个浏览器（打卡浏览器需要对应的插件）
-        browsers: ['Chrome'],
+        // 使用无头浏览器
+        browsers: ['ChromeHeadless'],
 
 
         // Continuous Integration mode
