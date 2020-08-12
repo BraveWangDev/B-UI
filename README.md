@@ -56,12 +56,6 @@ B-UI
     </script>
     ```
     
-4. 引入 svg symbols
-   ```
-   <!--引入图标库-->
-   <script src="//at.alicdn.com/t/font_1989058_ned9q1fpvd9.js"></script>
-   ```
-
 ## 文档
 ## 提问
 ## 变更记录
