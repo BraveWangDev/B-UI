@@ -1,5 +1,7 @@
 B-UI	 基于 Vue 的组件库
 
+[![Build Status](https://www.travis-ci.org/BraveWangDev/B-UI.svg?branch=master)](https://www.travis-ci.org/BraveWangDev/B-UI)
+
 ## 介绍
 ## 开始使用
 
