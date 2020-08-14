@@ -9,10 +9,11 @@
 <script>
     import './svg'
     export default {
+        name: 'BIcon',
         props:['name']
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     /*1em: 图标和字体大小一致*/
     .b-icon {
         width: 1em;

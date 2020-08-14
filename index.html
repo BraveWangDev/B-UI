@@ -32,6 +32,11 @@
             font-size: var(--font-size);
         }
     </style>
+    <style>
+        .box{
+            margin: 20px;
+        }
+    </style>
     <!--icon 样式移入src/icon.vue组件中-->
     <!--<style>-->
         <!--/*1em: 图标和字体大小一致*/-->
@@ -43,58 +48,66 @@
 </head>
 <body>
 <div id="app">
-    <!--将 svg 的 icon 标签，移到组件内部，并传参icon-->
-    <b-button icon="settings">
-        按钮传参
-    </b-button>
-    <!--不传 icon-->
-    <b-button>
-        不传icon
-    </b-button>
-    <!--icon-position控制 icon 的左右位置-->
-    <!--注意：组件内部参数名为iconPosition，外部传参为icon-position-->
-    <b-button icon="settings" icon-position="left">
-        按钮
-    </b-button>
-    <b-button icon="settings" icon-position="right">
-        按钮
-    </b-button>
-    <b-button icon="settings" icon-position="up">
-        up报错
-    </b-button>
-    <!--直接使用 icon-->
-    <!--<svg class="icon">-->
+    <div class="box">
+        <b-input value="张三" :disabled="true"></b-input>
+        <b-input value="李四" :readonly="true"></b-input>
+        <b-input value="王五"></b-input>
+    </div>
+    <div class="box">
+        <b-input value="王" error="姓名不能少于两个字"></b-input>
+    </div>
+    <div class="box">
+        <!--将 svg 的 icon 标签，移到组件内部，并传参icon-->
+        <b-button icon="settings">
+            按钮传参
+        </b-button>
+        <!--不传 icon-->
+        <b-button>
+            不传icon
+        </b-button>
+        <!--icon-position控制 icon 的左右位置-->
+        <!--注意：组件内部参数名为iconPosition，外部传参为icon-position-->
+        <b-button icon="settings" icon-position="left">
+            按钮
+        </b-button>
+        <b-button icon="settings" icon-position="right">
+            按钮
+        </b-button>
+        <b-button icon="settings" icon-position="up">
+            up报错
+        </b-button>
+        <!--直接使用 icon-->
+        <!--<svg class="icon">-->
         <!--<use xlink:href="#i-download"></use>-->
-    <!--</svg>-->
-    <!--使用 b-icon 组件显示-->
-    <b-icon name="download"></b-icon>
-    <b-icon name="loading"></b-icon>
-    <!--带 loadling 的按钮-->
-    <b-button :loading="true">
-        左loading
-    </b-button>
-    <b-button :loading="true" icon-position="right">
-        右loading
-    </b-button>
-    <!--点击按钮，取消 loading 状态(需要在 data 中声明 loading)-->
-    <b-button  :loading="loading1" @click="loading1 = !loading1">
-        点击loading
-    </b-button>
-    <b-button icon="settings"  :loading="loading2" @click="loading2 = !loading2">
-        点击左loading
-    </b-button>
-    <b-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-        点击右loading
-    </b-button>
-    <br>
-    <br>
-    <b-button-group>
-        <b-button icon="left">上一页</b-button>
-        <b-button>更多</b-button>
-        <b-button icon="right" icon-position="right">下一页</b-button>
-    </b-button-group>
-    <div id="test">
-
+        <!--</svg>-->
+        <!--使用 b-icon 组件显示-->
+        <b-icon name="download"></b-icon>
+        <b-icon name="loading"></b-icon>
+        <!--带 loadling 的按钮-->
+        <b-button :loading="true">
+            左loading
+        </b-button>
+        <b-button :loading="true" icon-position="right">
+            右loading
+        </b-button>
+        <!--点击按钮，取消 loading 状态(需要在 data 中声明 loading)-->
+        <b-button  :loading="loading1" @click="loading1 = !loading1">
+            点击loading
+        </b-button>
+        <b-button icon="settings"  :loading="loading2" @click="loading2 = !loading2">
+            点击左loading
+        </b-button>
+        <b-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+            点击右loading
+        </b-button>
+        <br>
+        <br>
+        <b-button-group>
+            <b-button icon="left">上一页</b-button>
+            <b-button>更多</b-button>
+            <b-button icon="right" icon-position="right">下一页</b-button>
+        </b-button-group>
+        <div id="test"></div>
     </div>
 </div>
 <script src="./src/app.js"></script>

@@ -59,6 +59,7 @@
     import Icon from '../src/icon'
     // props:组件通信
     export default {
+        name: 'BButton',
         // 2，在 button 组件中，局部注册b-icon组件
         components:{
             'b-icon': Icon
@@ -81,7 +82,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     @keyframes spin {
         0%{ transform: rotate(0deg);}
         100%{ transform: rotate(360deg);}

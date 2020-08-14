@@ -6,6 +6,7 @@
 </template>
 <script>
     export default {
+        name: 'BButtonGroup',
         // 当 UI 出现在页面时触发
         mounted(){
             console.log(this.$el.children)
@@ -17,7 +18,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .b-button-group{
         display: inline-flex;
         vertical-align: middle;
