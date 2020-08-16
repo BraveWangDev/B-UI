@@ -53,8 +53,13 @@
         <!--<b-input value="李四" :readonly="true"></b-input>-->
         <!--<b-input value="王五"></b-input>-->
     <!--</div>-->
+    <!--<div class="box">-->
+        <!--<b-input value="王" @change="inputChange"></b-input>-->
+    <!--</div>-->
     <div class="box">
-        <b-input value="王" @change="inputChange"></b-input>
+        <b-input value="王" v-model="message"></b-input>
+        <p>{{ message }}</p>
+        <Button @click="message+=1">+1</Button>
     </div>
     <!--<div class="box">-->
         <!--<b-input value="王" error="姓名不能少于两个字"></b-input>-->

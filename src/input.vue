@@ -2,10 +2,10 @@
     <!--如果error存在，添加class  { error }同{'error': error}-->
     <div class="wrapper" :class="{'error': error}">
         <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
-            @change="$emit('change', $event)"
-            @input="$emit('input', $event)"
-            @focus="$emit('focus', $event)"
-            @blur="$emit('blur', $event)"
+            @change="$emit('change', $event.target.value)"
+            @input="$emit('input', $event.target.value)"
+            @focus="$emit('focus', $event.target.value)"
+            @blur="$emit('blur', $event.target.value)"
         >
         <!--icon标签是引入的Icon组件-->
         <template v-if="error">

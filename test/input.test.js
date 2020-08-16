@@ -79,12 +79,16 @@ describe('Input', () => {
                 const callback = sinon.fake();
                 vm.$on(eventName, callback)
                 let event = new Event(eventName) // 触发 input 的事件
-                console.log(event);
+                Object.defineProperty(
+                    event, 'target', {
+                        value:{ value: "hi" },enumerable: false
+                    }
+                )
                 let inputElement = vm.$el.querySelector('input')
                 inputElement.dispatchEvent(event)
                 console.log(eventName);
                 //期待：当触发change事件后，callback函数被调用，且第一个参数为event
-                expect(callback).to.have.been.calledWith(1)
+                expect(callback).to.have.been.calledWith(event.target.value)
             })
         })
 
