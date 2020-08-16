@@ -48,14 +48,17 @@
 </head>
 <body>
 <div id="app">
+    <!--<div class="box">-->
+        <!--<b-input value="张三" :disabled="true"></b-input>-->
+        <!--<b-input value="李四" :readonly="true"></b-input>-->
+        <!--<b-input value="王五"></b-input>-->
+    <!--</div>-->
     <div class="box">
-        <b-input value="张三" :disabled="true"></b-input>
-        <b-input value="李四" :readonly="true"></b-input>
-        <b-input value="王五"></b-input>
+        <b-input value="王" @change="inputChange"></b-input>
     </div>
-    <div class="box">
-        <b-input value="王" error="姓名不能少于两个字"></b-input>
-    </div>
+    <!--<div class="box">-->
+        <!--<b-input value="王" error="姓名不能少于两个字"></b-input>-->
+    <!--</div>-->
     <div class="box">
         <!--将 svg 的 icon 标签，移到组件内部，并传参icon-->
         <b-button icon="settings">

@@ -1,7 +1,12 @@
 <template>
     <!--如果error存在，添加class  { error }同{'error': error}-->
     <div class="wrapper" :class="{'error': error}">
-        <input :value="value" type="text" :disabled="disabled" :readonly="readonly">
+        <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+            @change="$emit('change', $event)"
+            @input="$emit('input', $event)"
+            @focus="$emit('focus', $event)"
+            @blur="$emit('blur', $event)"
+        >
         <!--icon标签是引入的Icon组件-->
         <template v-if="error">
             <icon name="error" class="icon-error"></icon>
